@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 书名 + 状态 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_record_book_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="图书名称"
+                android:textSize="16sp"
+                android:textColor="@color/gray_dark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_record_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:background="@drawable/bg_status_borrowed"
+                android:text="借阅中"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- 借阅时间 -->
+        <TextView
+            android:id="@+id/tv_record_borrow_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="借阅时间：2024-01-15 14:30"
+            android:textSize="13sp"
+            android:textColor="@color/gray_normal" />
+
+        <!-- 归还时间 (历史页显示) -->
+        <TextView
+            android:id="@+id/tv_record_return_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="归还时间：2024-01-20 10:15"
+            android:textSize="13sp"
+            android:textColor="@color/gray_normal"
+            android:visibility="gone" />
+
+        <!-- 归还按钮 (仅借阅中显示) -->
+        <Button
+            android:id="@+id/btn_return"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="end"
+            android:text="@string/btn_return"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorAccent"
+            android:paddingHorizontal="16dp"
+            android:minWidth="80dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

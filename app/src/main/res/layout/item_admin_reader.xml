@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- 头像 -->
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:contentDescription="读者头像"
+            android:scaleType="centerCrop" />
+
+        <!-- 读者信息 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <TextView
+                android:id="@+id/tv_reader_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="张三"
+                android:textSize="16sp"
+                android:textColor="@color/gray_dark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_reader_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="账号：student1"
+                android:textSize="13sp"
+                android:textColor="@color/gray_normal" />
+
+            <TextView
+                android:id="@+id/tv_reader_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="电话：13800138001 | 邮箱：zhangsan@school.com"
+                android:textSize="12sp"
+                android:textColor="@color/gray_light" />
+
+            <TextView
+                android:id="@+id/tv_reader_borrow_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="当前借阅：2本"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>
+
+        <!-- 操作按钮 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btn_reset_password"
+                android:layout_width="80dp"
+                android:layout_height="32dp"
+                android:layout_marginBottom="4dp"
+                android:text="重置密码"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:backgroundTint="#FF9800"
+                android:paddingHorizontal="8dp" />
+
+            <Button
+                android:id="@+id/btn_view_records"
+                android:layout_width="80dp"
+                android:layout_height="32dp"
+                android:text="查看记录"
+                android:textSize="11sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:paddingHorizontal="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/gray_bg">
+
+    <!-- 标题区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="48dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:contentDescription="图书图标"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_title"
+            android:textSize="28sp"
+            android:textColor="@color/gray_dark"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="请选择登录身份"
+            android:textSize="14sp"
+            android:textColor="@color/gray_normal" />
+    </LinearLayout>
+
+    <!-- 身份选择按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginHorizontal="32dp">
+
+        <!-- 读者登录 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:contentDescription="读者图标"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btn_reader_login"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="👤 读者登录"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:backgroundTint="#4CAF50"
+                android:elevation="4dp" />
+        </LinearLayout>
+
+        <!-- 管理员登录 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@android:drawable/ic_menu_manage"
+                android:contentDescription="管理员图标"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btn_admin_login"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="🔐 管理员登录"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:elevation="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

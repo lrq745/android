@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bookborrow">
+
+    <application
+        android:name=".BookApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BookBorrowApp">
+
+        <!-- 主页面：程序入口（角色选择） -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ========== 读者端 ========== -->
+        <!-- 读者登录 -->
+        <activity
+            android:name=".ReaderLoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- 读者主页 -->
+        <activity
+            android:name=".ReaderMainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar"
+            android:parentActivityName=".ReaderLoginActivity" />
+
+        <!-- 图书列表页面 -->
+        <activity
+            android:name=".BookListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar"
+            android:parentActivityName=".ReaderMainActivity" />
+
+        <!-- 图书详情页面 -->
+        <activity
+            android:name=".BookDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar"
+            android:parentActivityName=".BookListActivity" />
+
+        <!-- 我的借阅记录页面 -->
+        <activity
+            android:name=".BorrowRecordActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar"
+            android:parentActivityName=".ReaderMainActivity" />
+
+        <!-- 借阅历史页面 -->
+        <activity
+            android:name=".BorrowHistoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar"
+            android:parentActivityName=".ReaderMainActivity" />
+
+        <!-- ========== 管理员端 ========== -->
+        <!-- 管理员登录 -->
+        <activity
+            android:name=".AdminLoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- 管理员主页 -->
+        <activity
+            android:name=".AdminMainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar"
+            android:parentActivityName=".AdminLoginActivity" />
+
+        <!-- 图书管理 -->
+        <activity
+            android:name=".AdminBookManageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar"
+            android:parentActivityName=".AdminMainActivity" />
+
+        <!-- 借阅记录管理 -->
+        <activity
+            android:name=".AdminRecordManageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar"
+            android:parentActivityName=".AdminMainActivity" />
+
+        <!-- 读者管理 -->
+        <activity
+            android:name=".AdminReaderManageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar"
+            android:parentActivityName=".AdminMainActivity" />
+
+        <!-- 逾期图书管理 -->
+        <activity
+            android:name=".AdminOverdueActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BookBorrowApp.NoActionBar"
+            android:parentActivityName=".AdminMainActivity" />
+
+    </application>
+
+</manifest>

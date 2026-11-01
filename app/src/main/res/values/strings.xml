@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">图书借阅系统</string>
+    <string name="home_title">图书借阅系统</string>
+    <string name="btn_browse_books">浏览图书</string>
+    <string name="btn_my_borrow">我的借阅</string>
+    <string name="book_list_title">图书列表</string>
+    <string name="book_detail_title">图书详情</string>
+    <string name="borrow_record_title">我的借阅记录</string>
+    <string name="book_author">作者：%s</string>
+    <string name="book_available">可借数量：%d</string>
+    <string name="book_description">图书简介</string>
+    <string name="btn_borrow">借阅</string>
+    <string name="btn_return">归还</string>
+    <string name="no_books">暂无图书</string>
+    <string name="no_borrow_records">暂无借阅记录</string>
+    <string name="no_borrow_history">暂无借阅历史</string>
+    <string name="borrow_history_title">借阅历史</string>
+    <string name="btn_borrow_history">借阅历史</string>
+    <string name="borrow_success">借阅成功</string>
+    <string name="borrow_fail_no_stock">库存不足，无法借阅</string>
+    <string name="return_success">归还成功</string>
+    <string name="borrow_time">借阅时间：%s</string>
+    <string name="empty_view_text">暂无数据</string>
+</resources>
